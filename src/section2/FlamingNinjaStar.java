@@ -1,5 +1,7 @@
 package section2;
 
+import java.awt.Color;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class FlamingNinjaStar {
@@ -38,6 +40,21 @@ public class FlamingNinjaStar {
 			// 10. Check that your shape is the same as Figure 1. This is one arm of the ninja star.
 			
 			// 11. Color your ninja star like Figure 2.
+		Robot robot = new Robot();
+		robot.setSpeed(100);
+		for(int i = 0; i < 25; i++) {
+		robot.penDown();
+		robot.turn(45);
+		robot.move(64);
+		robot.turn(-40);
+		robot.setPenColor(Color.yellow);
+		robot.move(flameSize);
+		robot.turn(170);
+		robot.move(flameSize);
+		robot.setPenColor(Color.black);
+		robot.turn(64);
+		robot.move(baseSize);
+		}
 		
 	}
 

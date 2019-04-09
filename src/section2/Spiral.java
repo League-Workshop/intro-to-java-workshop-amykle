@@ -5,6 +5,15 @@ import org.jointheleague.graphical.robot.Robot;
 public class Spiral {
 
 	public static void main(String[] args) {
+		
+		Robot boom = new Robot ();
+		boom.penDown();
+		boom.setSpeed(100);
+		for (int i = 0; i < 75; i++) {
+		boom.setRandomPenColor();
+		boom.move(5*i);
+		boom.turn(360/7);
+		boom.setPenWidth(i);
 		// 1. Create a new Robot
 		
 		// 5. Set your robot's pen down 
@@ -20,6 +29,6 @@ public class Spiral {
 			// 2. Turn the robot 360/7 degrees to the right
 		
 			// 8. Set the pen width to i
-			
+		}
 	}
 }

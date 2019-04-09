@@ -30,6 +30,17 @@ public class PentagonCrazy {
 			// 6. Turn the robot the amount in your angle variable
 	
 			// 11. Turn the robot one more degree
+		
+		Robot bob = new Robot();
+		bob.setRandomPenColor();
+		bob.penDown();
+		bob.setSpeed(100);
+		int sides = 5;
+		int angles = 72;
+		for (int i = 0; i < 200; i++) {
+		bob.move(i);
+		bob.turn(angles + 1);
+		}
 
 	}
 
