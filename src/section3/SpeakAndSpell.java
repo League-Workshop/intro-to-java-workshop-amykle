@@ -17,7 +17,27 @@ public class SpeakAndSpell {
 		// 4. Otherwise say "wrong"
 
 		// 5. repeat the process for other words
-		
+		speak ("Spell Mandlebrot");
+		String answer = JOptionPane.showInputDialog("Write your answer");
+		if (answer.equalsIgnoreCase("mandlebrot")) {
+			speak ("Correct");
+		} else {
+			speak ("Wrong");
+		}
+		speak ("Spell Bellicose");
+		String answer2 = JOptionPane.showInputDialog("Write your answer");
+		if (answer2.equalsIgnoreCase("bellicose")) {
+			speak ("Correct");
+		} else {
+			speak ("Wrong");
+		}
+		speak ("Deciduous");
+		String answer3 = JOptionPane.showInputDialog("Write your answer");
+		if (answer3.equalsIgnoreCase("deciduous")) {
+			speak ("Correct");
+		} else {
+			speak ("Wrong;");
+		}
 	}
 
 	static void speak(String words) {

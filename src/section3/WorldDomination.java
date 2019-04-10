@@ -10,7 +10,12 @@ public class WorldDomination {
 		// 2. If they say "yes", tell them they will rule the world.
 
 		// 3. Otherwise, wish them good luck washing dishes.
-
+		String answer = JOptionPane.showInputDialog("Do you know how to write code?");
+		if (answer.equalsIgnoreCase("yes")) {
+			JOptionPane.showMessageDialog(null, "You will rule the world");
+		} else {
+			JOptionPane.showMessageDialog(null, "Good luck washing dishes");
+		}
 	}
 }
 

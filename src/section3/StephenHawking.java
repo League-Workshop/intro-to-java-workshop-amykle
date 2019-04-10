@@ -15,7 +15,15 @@ public class StephenHawking {
 	// 3. call the speak method below and send it the sentence
 
 	
-
+		// TODO Auto-generated method stub
+		public static void main(String[] args) {
+			
+		
+		for (int i = 0; i < 1; i++) {
+		String sentence = JOptionPane.showInputDialog("Enter a sentence");
+		speak (sentence);
+		}
+		}
 	
 	
 	

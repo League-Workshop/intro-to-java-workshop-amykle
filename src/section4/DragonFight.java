@@ -21,7 +21,7 @@ public class DragonFight {
 		
 		
 		// 6.  Delete the slashes at the beginning of the next line.  
-		//while(playerHealth>0 && dragonHealth>0) {    //this line of code keeps the battle going until someone's health reaches 0 
+		while(playerHealth>0 && dragonHealth>0) {    //this line of code keeps the battle going until someone's health reaches 0 
 		
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 		
@@ -60,6 +60,13 @@ public class DragonFight {
 			
 			//-- Pop up a message that tells the their current health and the dragon's currently health (Bonus: Also display the amount of health that was lost for each player this round)
 			
+		int playerHealth = 100;
+		int dragonHealth = 100;
+		int playerDamage;
+		int dragonDamage;
+		String fight = JOptionPane.showInputDialog("Do you want to attack the dragon with a kick or a yell?");
+		
 		}
 	}
+}
 
