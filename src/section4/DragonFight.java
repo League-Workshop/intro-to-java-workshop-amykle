@@ -12,13 +12,13 @@ public class DragonFight {
 		
 		JOptionPane.showMessageDialog(null, "Defeat the dragon to take its treasure!", "Dragon Fighter", 0, dragon);
 		// 2. Create a variable called "playerHealth" to store your health (set it equal to 100)
-	
+	int playerHealth = 100;
 		// 3. Create a variable called "dragonHealth" to store the dragon's health (set it equal to 100)
-		
+	int dragonHealth = 100;
 		// 4. Create a variable to hold the damage the player's attack does each round
-		
+	int playerDamage;
 		// 5. Create a variable to hold the damage the dragon's attack does each round
-		
+	int dragonDamage;
 		
 		// 6.  Delete the slashes at the beginning of the next line.  
 		while(playerHealth>0 && dragonHealth>0) {    //this line of code keeps the battle going until someone's health reaches 0 
@@ -26,15 +26,25 @@ public class DragonFight {
 		// 7. Add a closing mustache at the very bottom of this program (since we just added an opening mustache on the previous step).
 		
 		// 8. Ask the player in a pop-up if they want to attack the dragon with a yell or a kick
-		
+		String attackMethod = JOptionPane.showInputDialog("Do you want to attack the dragon with a yell or a kick?");
 		// 9. If they typed in "yell":
-		
+		if (attackMethod.equalsIgnoreCase("yell")) {
+			Random rand = new Random();
+			dragonDamage = rand.nextInt(11);
+			dragonHealth = dragonHealth - dragonDamage;
+			JOptionPane.showMessageDialog(null, "The dragon's health is now at " + dragonHealth);
+		}
 			//-- Find a random number between 0 and 10 and store it in dragonDamage
 			
 			//-- Subtract that number from the dragon's health variable 
 			
 		// 10. If they typed in "kick":
-		
+		if (attackMethod.equalsIgnoreCase("kick")) {
+			Random rand = new Random();
+			dragonDamage = rand.nextInt(26);
+			dragonHealth = dragonHealth - dragonDamage;
+			JOptionPane.showMessageDialog(null,  "The dragon's health is now at " + dragonHealth);
+		}
 			//-- Find a random number between 0 and 25 and store it in dragonDamage
 			
 			//-- Subtract that number from the dragon's health variable
@@ -42,6 +52,17 @@ public class DragonFight {
 			
 		
 		// 11.  Find a random number between 0 and 35 and store it in playerDamage
+		
+		Random rand = new Random();
+		playerDamage = rand.nextInt(36);
+		playerHealth = playerHealth - playerDamage;
+		if (playerHealth <= 0) {
+			JOptionPane.showMessageDialog(null, "You lost :(");		
+		} else if (dragonHealth <= 0) {
+			JOptionPane.showMessageDialog(null, "The dragon is dead, and you now have a ton of gold!");
+		} else {
+			JOptionPane.showMessageDialog(null, "Your Health: " + playerHealth + "\nDragon's Health: " + dragonHealth );
+		}
 		
 		// 12. Subtract this number from the player's health
 		
@@ -60,13 +81,14 @@ public class DragonFight {
 			
 			//-- Pop up a message that tells the their current health and the dragon's currently health (Bonus: Also display the amount of health that was lost for each player this round)
 			
-		int playerHealth = 100;
-		int dragonHealth = 100;
-		int playerDamage;
-		int dragonDamage;
-		String fight = JOptionPane.showInputDialog("Do you want to attack the dragon with a kick or a yell?");
+		
 		
 		}
+	}
+
+	private static void showInputDialog(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 
